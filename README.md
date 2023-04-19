@@ -193,7 +193,7 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
         ```
 <br />
 
-**Note: The script can download the entir BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
+**Note: The script can download the entire BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
 <br />
 
