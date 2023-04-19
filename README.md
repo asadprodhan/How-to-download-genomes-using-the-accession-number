@@ -17,6 +17,17 @@
 For other organisms, navigate to the assembly summary report starting from the ‘Index of /genomes/refseq’ as shown below:
 
 
+<br />
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/Index_NCBI.PNG"
+  >
+</p>
+<p align = "center">
+Figure 1. Index of the genomes in the RefSeq
+</p>
+<br />
+
 
 - Filter out your targeted genomes from the assembly report. For example, all species of Pseudomonas can be extracted from the bacterial assembly report as follows:
 
