@@ -191,7 +191,7 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
         done < ${metadata}
 
         ```
-
+<br />
 
 **Note: The script can download the entir BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
