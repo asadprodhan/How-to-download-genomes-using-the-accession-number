@@ -1,7 +1,14 @@
-# **How to download genomes using the accession number** 
+# **How to download genomes using the accession number**
+
+
+
+### **Asad Prodhan PhD** 
+
+
+**https://asadprodhan.github.io/**
+
 
 <br />
-
 
 ## **Step 1: Collect the accession numbers of your interest**
 
