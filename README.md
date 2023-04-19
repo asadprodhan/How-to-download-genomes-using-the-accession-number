@@ -171,6 +171,6 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 
         ```
 
-### **Now, you have downloaded the genomic sequences of the all the accessions in the list.**
+### **Now, you have downloaded the genomic sequences of all the accessions in the list.**
 
 
