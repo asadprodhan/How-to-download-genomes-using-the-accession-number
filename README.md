@@ -14,7 +14,7 @@
     ```
     
     
-For other organisms, navigate to the assembly summary report starting from the ‘Index of /genomes/refseq’ as shown below:
+For other organisms, navigate to the assembly summary report starting from the ‘Index of /genomes/refseq’ as shown in Fig. 1:
 
 
 <br />
@@ -150,6 +150,9 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
     ```
 
 
+**The script will be automatically downloading the genomic sequences (Fig. 2).**
+
+
 ## **The script**
 
 
@@ -181,6 +184,22 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
         done < ${metadata}
 
         ```
+
+## **The script in action**
+
+
+<br />
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/Output.PNG"
+  >
+</p>
+<p align = "center">
+Figure 2. The script is automatically downloading the genomic sequences
+</p>
+
+<br />
+
 
 ### **Now, you have downloaded the genomic sequences of all the accessions in the list.**
 
