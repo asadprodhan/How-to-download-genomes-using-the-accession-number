@@ -214,6 +214,19 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 Figure 3. The script is automatically downloading the genomic sequences
 </p>
 
+## **Output files**
+
+
+<br />
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/FileName_and_Header_Before.PNG"
+  >
+</p>
+<p align = "center">
+Figure 4. Accession list
+</p>
+<br />
 
 **Note: The script can download the entire BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
