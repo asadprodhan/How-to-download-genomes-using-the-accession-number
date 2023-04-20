@@ -138,6 +138,41 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 
 - Keep the following script in the ‘Downloads’ directory 
 
+<br />
+
+## **The script**
+
+
+        ```
+        #!/bin/bash
+
+        #metadata
+        metadata=./*.csv
+        #
+        Red="$(tput setaf 1)"
+        Green="$(tput setaf 2)"
+        Bold=$(tput bold)
+        reset=`tput sgr0` # turns off all atribute
+        while IFS=, read -r field1  
+
+        do 
+            echo ""
+            echo "${Red}${Bold}Downloading ${reset}: "${field1}"" 
+            datasets download genome accession "${field1}" --filename "${field1}".zip
+            echo "${Bold}Extracting "${field1}.zip" ${reset}"
+            unzip "${field1}.zip" 
+            cd "ncbi_dataset/data/${field1}" 
+            echo "${Bold}Moving "${field1}" fasta file into home directory${reset}"
+            mv *.fna ../../../
+            cd "../../../"
+            rm -r "${field1}".zip ncbi_dataset *.md  
+            echo "${Green}${Bold}Download_completed ${reset}: ${field1}" 
+            echo ""
+        done < ${metadata}
+
+        ```
+<br />
+
 
 - Keep the ‘accession_list.csv’ file in the ‘Downloads’ directory
 
@@ -176,43 +211,9 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
   >
 </p>
 <p align = "center">
-Figure 2. The script is automatically downloading the genomic sequences
+Figure 3. The script is automatically downloading the genomic sequences
 </p>
 
-<br />
-
-## **The script**
-
-
-        ```
-        #!/bin/bash
-
-        #metadata
-        metadata=./*.csv
-        #
-        Red="$(tput setaf 1)"
-        Green="$(tput setaf 2)"
-        Bold=$(tput bold)
-        reset=`tput sgr0` # turns off all atribute
-        while IFS=, read -r field1  
-
-        do 
-            echo ""
-            echo "${Red}${Bold}Downloading ${reset}: "${field1}"" 
-            datasets download genome accession "${field1}" --filename "${field1}".zip
-            echo "${Bold}Extracting "${field1}.zip" ${reset}"
-            unzip "${field1}.zip" 
-            cd "ncbi_dataset/data/${field1}" 
-            echo "${Bold}Moving "${field1}" fasta file into home directory${reset}"
-            mv *.fna ../../../
-            cd "../../../"
-            rm -r "${field1}".zip ncbi_dataset *.md  
-            echo "${Green}${Bold}Download_completed ${reset}: ${field1}" 
-            echo ""
-        done < ${metadata}
-
-        ```
-<br />
 
 **Note: The script can download the entire BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
