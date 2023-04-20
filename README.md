@@ -123,7 +123,7 @@ Figure 2. Accession list
     ```
 
 
-ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+Ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 
 <br />
 
@@ -174,7 +174,7 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 <br />
 
 
-- Keep the ‘accession_list.csv’ file in the ‘Downloads’ directory
+- Keep the ‘accession_list.csv’ file (Fig. 2) in the ‘Downloads’ directory
 
 
 - Check the file type of ‘accession_list.csv’
@@ -201,7 +201,7 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
     ```
 
 
-**The script will be automatically downloading the genomic sequences (Fig. 2).**
+**The script will be automatically downloading the genomic sequences (Fig. 3).**
 
 
 <br />
@@ -213,6 +213,8 @@ ref: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 <p align = "center">
 Figure 3. The script is automatically downloading the genomic sequences
 </p>
+
+<br />
 
 ## **Output files**
 
@@ -226,14 +228,23 @@ Figure 3. The script is automatically downloading the genomic sequences
 <p align = "center">
 Figure 4. An image showing the output files with their file names and headers. 
 </p>
+
+<br />
+
 <br />
 
 **Note: The script can download the entire BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
 <br />
 
-However, if the file names and headers are too big to deal with, they can be shortented (fIG. 5) by replacing the above script by the following script:
+However, if the file names and headers (Fig. 4) are too big to deal with, they can be shortented (Fig. 5) by replacing the above script by the following script:
+
 <br />
+
+## **The script that will retrieve the genomic data and shorten names and headers**
+
+<br />
+
 ```
 #!/bin/bash
 
@@ -270,6 +281,9 @@ do
 done < ${metadata}
 
 ```
+
+<br />
+
 ## **Output files with SHORTENED names and headers**
 
 <br />
@@ -283,6 +297,7 @@ Figure 5. An image showing the output files with their **SHORTENED** file names 
 </p>
 <br />
 
+<br />
 
 ### **Now, you have downloaded the genomic sequences of all the accessions in the list.**
 
