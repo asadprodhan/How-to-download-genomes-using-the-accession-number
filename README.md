@@ -21,7 +21,7 @@
     ```
     
     
-For other organisms, navigate to the assembly summary report starting from the ‘Index of /genomes/refseq’ as shown in Fig. 1:
+- For other organisms, navigate to the assembly summary report starting from the ‘Index of /genomes/refseq’ as shown in Fig. 1:
 
 
 <br />
