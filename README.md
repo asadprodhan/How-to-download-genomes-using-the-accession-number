@@ -82,8 +82,17 @@ Figure 1. Index of the genomes in the RefSeq
     Column 20 ($20):  ftp_path, the download link (however, the links, as they appear here, do not download the files, the links need to be amended in the following step to get them download-ready)
     
     
-- Make a csv file with the accession numbers only and name it as ‘accession_list.csv’
+- Make a csv file with the accession numbers only and name it as ‘accession_list.csv’ (Fig. 2)
 
+<br />
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/accession_list.PNG"
+  >
+</p>
+<p align = "center">
+Figure 2. Accession list
+</p>
 <br />
 
 ## **Step 2: Install ‘NCBI Datasets’ tool**
