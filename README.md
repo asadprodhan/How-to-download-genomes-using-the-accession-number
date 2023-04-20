@@ -275,7 +275,7 @@ done < ${metadata}
 <br />
 <p align="center">
   <img 
-    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/FileName_and_Header_Before.PNG"
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/FileName_and_Header_After.PNG"
   >
 </p>
 <p align = "center">
