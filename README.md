@@ -224,13 +224,65 @@ Figure 3. The script is automatically downloading the genomic sequences
   >
 </p>
 <p align = "center">
-Figure 4. Accession list
+Figure 4. An image showing the output files with their file names and headers. 
 </p>
 <br />
 
 **Note: The script can download the entire BioProject by replacing the accession number by the BioProject number. Downloading using the BioProject number will automatically download all the associated data and metadata.**
 
 <br />
+
+However, if the file names and headers are too big to deal with, they can be shortented (fIG. 5) by replacing the above script by the following script:
+<br />
+```
+#!/bin/bash
+
+#metadata
+metadata=./*.csv
+#
+Red="$(tput setaf 1)"
+Green="$(tput setaf 2)"
+Bold=$(tput bold)
+reset=`tput sgr0` # turns off all atribute
+while IFS=, read -r field1  
+
+do 
+    echo ""
+    echo "${Red}${Bold}Downloading ${reset}: "${field1}"" 
+    datasets download genome accession "${field1}" --filename "${field1}".zip
+    echo "${Bold}Extracting "${field1}.zip" ${reset}"
+    unzip "${field1}.zip" 
+    cd "ncbi_dataset/data/${field1}"
+    echo "${Bold}Renaming "${field1}" fasta file${reset}"
+    mv *.fna "${field1}.fasta"
+    echo "${Bold}Shortening the "${field1}" fasta file header${reset}"
+    for fasta in *.fasta; 
+    do
+        cut -f 1 -d " " $fasta > ${fasta%.*}.temp;
+        mv ${fasta%.*}.temp $fasta
+    done
+    echo "${Bold}Moving "${field1}.fasta" into home directory${reset}"
+    mv "${field1}.fasta" ../../../
+    cd "../../../"
+    rm -r "${field1}".zip ncbi_dataset *.md  
+    echo "${Green}${Bold}Download_completed ${reset}: ${field1}" 
+    echo ""
+done < ${metadata}
+
+```
+## **Output files with SHORTENED names and headers**
+
+<br />
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/How-to-download-genomes-using-the-accession-number/blob/main/FileName_and_Header_Before.PNG"
+  >
+</p>
+<p align = "center">
+Figure 5. An image showing the output files with their **SHORTENED** file names and headers
+</p>
+<br />
+
 
 ### **Now, you have downloaded the genomic sequences of all the accessions in the list.**
 
